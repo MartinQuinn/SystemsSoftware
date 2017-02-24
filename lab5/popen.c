@@ -1,3 +1,10 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <string.h>
+
+
 int main(int argc, char *argv[])
 {
     pid_t pid;
@@ -7,7 +14,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
     else if(pid==0){
-        printf("pid in child=%d and parent=%d\n",getpid(),getppid()); 
+        printf("pid in child=%d and parent=%d\n",getpid(),getppid());
     }
     else{
         printf("pid in parent=%d and childid=%d\n",getpid(),pid);
